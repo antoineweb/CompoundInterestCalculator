@@ -247,6 +247,19 @@ struct ContentView: View {
                     // Breakdown Table
                     BreakdownBlock(vm: vm)
                         .padding(.horizontal)
+
+                    // Footer
+                    VStack(spacing: 4) {
+                        Text("Software made by")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                        Link("Anthony Foundry", destination: URL(string: "https://anthonyfoundry.xyz")!)
+                            .font(.footnote)
+                            .foregroundColor(.orange)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 16)
+                    .padding(.bottom, 8)
                 }
                 .padding(.vertical)
             }
